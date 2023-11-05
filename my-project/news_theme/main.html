@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>{% if page.title %}{{ page.title }} - {% endif %}{{ config.site_name }}</title>
+  {%- for path in config.extra_css %}
+    <link href="{{ path | url }}" rel="stylesheet">
+  {%- endfor %}
+</head>
+
+<body>
+    
+    <header>
+
+    <a href="index.html" id="news-banner">News</a>
+    
+    {% if nav|length > 1 %}
+    <ul>
+    {% for nav_item in nav %}
+        {% if nav_item.children %}
+            <li>{{ nav_item.title }}
+                <ul>
+                {% for nav_item in nav_item.children %}
+                    <li class="{% if nav_item.active %}current{% endif %}">
+                        <a href="{{ nav_item.url|url }}">{{ nav_item.title }}</a>
+                    </li>
+                {% endfor %}
+                </ul>
+            </li>
+        {% else %}
+            <li class="{% if nav_item.active %}current{% endif %}">
+                <a href="{{ nav_item.url|url }}">{{ nav_item.title }}</a>
+            </li>
+        {% endif %}
+    {% endfor %}
+    </ul>
+{% endif %}
+<div>
+    {{ page.content }}
+</div>
+  </header>
+  {%- for script in config.extra_javascript %}
+      {{ script | script_tag }}
+    {%- endfor %}
+</body>
+</html>
