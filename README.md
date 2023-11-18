@@ -1,4 +1,5 @@
 # Oberstufenprojekt
 
 News Webseite mit APIs
-hallo
+
+Der Politik - Tab zeigt News.
