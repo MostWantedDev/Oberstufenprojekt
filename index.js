@@ -4,6 +4,7 @@ const stichwort = document.getElementById("stichwort");
 const submit = document.getElementById("submit");
 const img = document.getElementById("img");
 const json = document.getElementById("json");
+const publishedAt = document.getElementById("publishedAt");
 
 submit.addEventListener("click", function () {
     $.ajax({
@@ -16,6 +17,8 @@ submit.addEventListener("click", function () {
         success: function (data) {
             json.innerHTML = data.articles[0].description;
             img.src = data.articles[0].urlToImage;
+            publishedAt.innerHTML = "Published at: " + new Date(data.articles[0].publishedAt).toLocaleString();;
+            source.innerHTML = data.articles[0].source;
         },
         error: function () {
             json.innerHTML = "Fehler beim Suchen";
