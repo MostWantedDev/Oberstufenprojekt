@@ -19,9 +19,14 @@ const topNews = document.getElementById("topNews");
                 
                 var img = document.createElement("img");
                 img.src = data.articles[i].urlToImage;
+
+                var publishedAt = document.createElement("publishedAt");
+                publishedAt.innerHTML = data.articles[i].publishedAt;
                 
+                url.appendChild(img);
                 box.appendChild(p);
-                box.appendChild(img);
+                box.append(url);
+                box.appendChild(publishedAt);
                 topNews.appendChild(box);
                 }
         },
