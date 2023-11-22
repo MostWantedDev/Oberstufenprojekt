@@ -32,7 +32,7 @@ const unterhaltungNews = document.getElementById("unterhaltungNews");
                 box.appendChild(p);
                 box.append(url);
                 box.appendChild(publishedAt);
-                topNews.appendChild(box);
+                unterhaltungNews.appendChild(box);
             }
         },
         error: function () {

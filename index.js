@@ -3,7 +3,7 @@ const topNews = document.getElementById("topNews");
 
 
     $.ajax({
-        url: "https://newsapi.org/v2/everything?q=wichtigste&sortBy=publishedAt&apikey=d6c732c05edd4696add8f5066bc1e422",
+        url: "https://newsapi.org/v2/everything?q=sport%20OR%20politik%20OR%20wirtschaft%20OR%20unterhaltung&sortBy=publishedAt&apikey=d6c732c05edd4696add8f5066bc1e422",
         type: 'GET',
         cache: false,
         contentType: false,

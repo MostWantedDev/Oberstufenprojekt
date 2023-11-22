@@ -32,7 +32,7 @@ const sportNews = document.getElementById("sportNews");
                 box.appendChild(p);
                 box.append(url);
                 box.appendChild(publishedAt);
-                topNews.appendChild(box);
+                sportNews.appendChild(box);
                 }
         },
         error: function () {

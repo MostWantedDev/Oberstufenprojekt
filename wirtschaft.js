@@ -32,7 +32,7 @@ const wirtschaftNews = document.getElementById("wirtschaftNews");
                 box.appendChild(p);
                 box.append(url);
                 box.appendChild(publishedAt);
-                topNews.appendChild(box);
+                wirtschaftNews.appendChild(box);
             }
         },
         error: function () {

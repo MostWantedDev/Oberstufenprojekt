@@ -14,9 +14,9 @@ header {
 }
 
 
-#news_banner {
-    text-decoration: none;
-    color: white;
+#news_Banner {
+    text-decoration: none !important;
+    color: white !important;
     font-size: 24px;
     font-weight: bold;
     border-radius: 12px;
@@ -48,3 +48,8 @@ img{
     width: 20%;
     height: 20%;
 }
+
+#news_Banner:visited {
+    color: white;
+  }
+  

@@ -32,7 +32,7 @@ const politikNews = document.getElementById("politikNews");
                 box.appendChild(p);
                 box.append(url);
                 box.appendChild(publishedAt);
-                topNews.appendChild(box);
+                politikNews.appendChild(box);
                 }
         },
         error: function () {
