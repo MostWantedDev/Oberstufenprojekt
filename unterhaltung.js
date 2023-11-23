@@ -3,7 +3,7 @@ const unterhaltungNews = document.getElementById("unterhaltungNews");
 
 
     $.ajax({
-        url: "https://newsapi.org/v2/everything?q=Wirtschaft&sortBy=publishedAt&apikey=d6c732c05edd4696add8f5066bc1e422",
+        url: "https://newsapi.org/v2/everything?q=Unterhaltung&sortBy=publishedAt&apikey=d6c732c05edd4696add8f5066bc1e422",
         type: 'GET',
         cache: false,
         contentType: false,
